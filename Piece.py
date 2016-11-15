@@ -1,4 +1,4 @@
 
 class Piece:
     def __init__(self):
-        x = 0;
+        self.location = (0,0)
