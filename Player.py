@@ -1,5 +1,6 @@
 __author__ = 'Zac'
+import Piece
 
 class Player:
     def __init__(self, color):
-        x = 0;
+        self.pieces = Piece.initial()
