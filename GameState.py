@@ -4,8 +4,8 @@ class GameState:
     def __init__(self):
         self.board = []
         self.whitesTurn = False
-        self.whitePlayer = Player.Player('w')
-        self.blackPlayer = Player.Player('b')
+        self.whitePlayer = Player.Player(True)
+        self.blackPlayer = Player.Player(False)
 
     def reset(self):
         x = 0;
