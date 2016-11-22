@@ -6,8 +6,6 @@ class Player:
     def __init__(self, color):
         self.isWhite = color
         self.pieces = []
-        self.image = "bin/Pawn_W.png"
-        self.location = (0, 0)
         self.startState()
 
     #used to reset the players to a starting state
