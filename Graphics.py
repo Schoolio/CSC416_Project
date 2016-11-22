@@ -18,5 +18,5 @@ def build_board(display):
 
 def build_pieces(display, pieces):
     x = pieces
-    z = pygame.image.load('x.image')
+    z = pygame.image.load(x.image)
     display.blit(z, (boardStart[0] + (x.location[0] * squareSize) + (squareSize / 2), boardStart[1] + (x.location[1] * squareSize) + (squareSize / 2)))
