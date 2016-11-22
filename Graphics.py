@@ -1,10 +1,10 @@
 __author__ = 'Zac'
 
-import pygame
+import pygame, Pieces
 
 squareSize = 70
 resolution = (400, 400)
-color = {"black": (39, 69, 19), "white": (255, 248, 220), "large_border": (205,133,63), "inlay_border": (0, 0, 0)}
+color = {"black": (39, 69, 19), "white": (255, 248, 220), "large_border": (205, 133, 63), "inlay_border": (0, 0, 0)}
 boardStart = (25, 100)
 
 
