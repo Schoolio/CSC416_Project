@@ -1,5 +1,7 @@
 #Zac Smith
 import Player
+
+
 class GameState:
     def __init__(self):
         self.board = []
