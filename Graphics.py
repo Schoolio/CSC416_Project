@@ -2,14 +2,20 @@ __author__ = 'Zac'
 
 import pygame
 
-squareSize = 20
+squareSize = 70
 resolution = (400, 400)
 color = {"black": (39, 69, 19), "white": (255, 248, 220), "large_border": (205,133,63), "inlay_border": (0, 0, 0)}
-boardStart = (25, 25)
+boardStart = (25, 100)
 
 
-def build_board():
-    for x in range(0, 9):
-        for y in range(0, 9):
-            temp = pygame.Rect()
-            local = pygame.Rect()
+def build_board(display):
+    for x in range(0, 8):
+        for y in range(0, 8):
+            if (x + y) % 2 == 0:
+                pygame.draw.rect(display, color["black"], ((boardStart[0] + (y * squareSize)), (boardStart[1] + (x * squareSize)), squareSize, squareSize))
+            else:
+                pygame.draw.rect(display, color["white"], (boardStart[0] + (y * squareSize), boardStart[1] + (x * squareSize), squareSize, squareSize))
+
+def build_pieces(display, pieces):
+    for x in pieces[:]:
+        display.blit(x.image)
