@@ -17,6 +17,5 @@ def build_board(display):
                 pygame.draw.rect(display, color["white"], (boardStart[0] + (y * squareSize), boardStart[1] + (x * squareSize), squareSize, squareSize))
 
 def build_pieces(display, pieces):
-    x = pieces
-    z = pygame.image.load(x.image)
-    display.blit(z, (boardStart[0] + (x.location[0] * squareSize), boardStart[1] + (x.location[1] * squareSize)))
+    for x in pieces[:]:
+        display.blit(pygame.image.load(x.image), (boardStart[0] + (x.location[0] * squareSize), boardStart[1] + (x.location[1] * squareSize)))
