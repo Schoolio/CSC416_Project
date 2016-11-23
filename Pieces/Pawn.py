@@ -6,4 +6,5 @@ class Pawn:
         self.canDoubleMove = True
         self.value = 1
         self.location = location
-        self.image = "bin/Pawn_W.png"
+        self.white_image = "bin/Pawn_W.png"
+        self.black_image = "bin/"

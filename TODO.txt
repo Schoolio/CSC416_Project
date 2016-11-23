@@ -1,3 +1,3 @@
 All the files for pieces need to have a self.image value added that is mapped to the respective image in the bin folder.
 Need to rename images in bin folder similar to the pawn one.
-Properly link GameState <- Player <- Type
+Properly link GameState <- Type
