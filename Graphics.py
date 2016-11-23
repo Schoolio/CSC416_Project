@@ -21,8 +21,8 @@ def build_pieces(display, pieces):
         display.blit(pygame.image.load(x.image), (boardStart[0] + (x.location[0] * squareSize), boardStart[1] + (x.location[1] * squareSize)))
 
 def build_border(display):
-    pygame.draw.rect(display, color["large_border"], (17, 173, 634, 634))
+    pygame.draw.rect(display, color["large_border"], (boardStart[0] / 2, boardStart[1] - (boardStart[0] / 2), 651, 651))
 
 
 def build_menu(display):
-    pygame.draw.rect(display, (255, 255, 255), (boardStart[0] + (squareSize * 8) + 45, 10, 700, 500))
+    pygame.draw.rect(display, (255, 255, 255), (boardStart[0] + (squareSize * 8) + 45, 10, 400, 500))
