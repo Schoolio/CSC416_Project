@@ -1,8 +1,7 @@
 __author__ = 'Zac'
 
-import Graphics, pygame, sys, Player, GameState, Pieces
+import Graphics, pygame, sys, GameState, Pieces
 from pygame.locals import *
-from Pieces import Pawn
 
 
 pygame.init()
