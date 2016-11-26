@@ -1,3 +1,5 @@
-All the files for pieces need to have a self.image value added that is mapped to the respective image in the bin folder.
-Need to rename images in bin folder similar to the pawn one.
+--COMPLETED--All the files for pieces need to have a self.image value added that is mapped to the respective image in the bin folder.--COMPLETED--
+--COMPLETED--Need to rename images in bin folder similar to the pawn one. --COMPLETED--
+Create a method that checks if a location/tile on a board is empty or not and returns true if the location/tile is empty otherwise false.
+Fill out move and attack functions for pieces. Need to complete the task above in order to finish this task.
 Properly link GameState <- Type
