@@ -10,10 +10,8 @@ class Bishop:
         self.image = None
         self.isWhite = isWhite
 
-        if self.isWhite is True:
-            self.image = "bin/Bishop_W.png"
-        else:
-            self.image = "bin/Bishop_B.png"
+        if self.isWhite is True: self.image = "bin/Bishop_W.png"
+        else: self.image = "bin/Bishop_B.png"
 
     def move(self):  # TODO Write move() function for Bishop
         pass

@@ -10,10 +10,8 @@ class Knight:
         self.image = None
         self.isWhite = isWhite
 
-        if self.isWhite is True:
-            self.image = "bin/Knight_W.png"
-        else:
-            self.image = "bin/Knight_B.png"
+        if self.isWhite is True: self.image = "bin/Knight_W.png"
+        else: self.image = "bin/Knight_B.png"
 
     def move(self):  # TODO Write move() function for Knight
         pass

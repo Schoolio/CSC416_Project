@@ -9,10 +9,8 @@ class Queen:
         self.image = None
         self.isWhite = isWhite
 
-        if self.isWhite is True:
-            self.image = "bin/Queen_W.png"
-        else:
-            self.image = "bin/Queen_B.png"
+        if self.isWhite is True: self.image = "bin/Queen_W.png"
+        else: self.image = "bin/Queen_B.png"
 
     def move(self):  # TODO Write move() function for Queen
         pass

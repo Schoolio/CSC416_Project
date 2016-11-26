@@ -9,10 +9,8 @@ class Rook:
         self.image = None
         self.isWhite = isWhite
 
-        if self.isWhite is True:
-            self.image = "bin/Rook_W.png"
-        else:
-            self.image = "bin/Rook_B.png"
+        if self.isWhite is True: self.image = "bin/Rook_W.png"
+        else: self.image = "bin/Rook_B.png"
 
     def move(self):  # TODO Write move() function for Rook
         pass
