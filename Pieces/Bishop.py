@@ -1,4 +1,5 @@
-__author__ = 'Zac'
+__author__ = 'Zac, Shawyn Kane'
+import Pieces
 
 
 class Bishop:
@@ -14,8 +15,9 @@ class Bishop:
         else:
             self.image = "bin/Bishop_B.png"
 
-    def move(self):
+    def move(self):  # TODO Write move() function for Bishop
         pass
 
-    def attack(self):
+
+    def attack(self):  # TODO Write attack() function for Bishop
         pass

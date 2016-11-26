@@ -1,4 +1,5 @@
-__author__ = 'Zac'
+__author__ = 'Zac, Shawyn Kane'
+import Pieces
 
 
 class King:
@@ -14,8 +15,8 @@ class King:
         else:
             self.image = "bin/King_B.png"
 
-    def move(self):
+    def move(self):  # TODO Write move() function for King
         pass
 
-    def attack(self):
+    def attack(self):  # TODO Write attack() function for King
         pass

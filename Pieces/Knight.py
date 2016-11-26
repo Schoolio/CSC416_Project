@@ -1,4 +1,5 @@
-__author__ = 'Zac'
+__author__ = 'Zac', 'Shawyn Kane'
+import Pieces
 
 
 class Knight:
@@ -14,8 +15,8 @@ class Knight:
         else:
             self.image = "bin/Knight_B.png"
 
-    def move(self):
+    def move(self):  # TODO Write move() function for Knight
         pass
 
-    def attack(self):
+    def attack(self):  # TODO Write attack() function for Knight
         pass

@@ -1,4 +1,4 @@
-__author__ = 'Zac'
+__author__ = 'Zac, Shawyn Kane'
 
 
 class Rook:
@@ -14,8 +14,8 @@ class Rook:
         else:
             self.image = "bin/Rook_B.png"
 
-    def move(self):
+    def move(self):  # TODO Write move() function for Rook
         pass
 
-    def attack(self):
+    def attack(self):  # TODO Write attack() function for Rook
         pass

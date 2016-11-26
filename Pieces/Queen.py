@@ -1,4 +1,4 @@
-__author__ = 'Zac'
+__author__ = 'Zac, Shawyn Kane'
 
 
 class Queen:
@@ -14,8 +14,8 @@ class Queen:
         else:
             self.image = "bin/Queen_B.png"
 
-    def move(self):
+    def move(self):  # TODO Write move() function for Queen
         pass
 
-    def attack(self):
+    def attack(self):  # TODO Write attack() function for Queen
         pass
