@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aec7b19-99b2-4da1-bc7a-4db493e81a51" name="Default" comment="Updated">
+    <list default="true" id="6aec7b19-99b2-4da1-bc7a-4db493e81a51" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Pawn.py" afterPath="$PROJECT_DIR$/Pieces/Pawn.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Pieces.py" afterPath="$PROJECT_DIR$/Pieces/Pieces.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -348,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480196913407</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated protecting_king() function in Pieces.py and the Pawn's move() and attack() functions.">
+      <created>1480273402855</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1480273402855</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -390,7 +395,8 @@
     <MESSAGE value="Minor edits." />
     <MESSAGE value="Combined each player's list of pieces into one list." />
     <MESSAGE value="Updated all the pieces and TODO.txt file. Created the location_is_empty() function." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated all the pieces and TODO.txt file. Created the location_is_empty() function." />
+    <MESSAGE value="Updated protecting_king() function in Pieces.py and the Pawn's move() and attack() functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated protecting_king() function in Pieces.py and the Pawn's move() and attack() functions." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
