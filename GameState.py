@@ -10,6 +10,8 @@ class GameState:
         self.whitesTurn = True
         self.pieces = []
         self.reset()
+        self.status = "None"
+        self.score = 0
 
     # Used to reset the game state to a starting position
     def reset(self):
