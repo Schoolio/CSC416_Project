@@ -9,14 +9,15 @@ boardStart = (75, 75)
 resolution = (1070, 770)
 borderWidth = 20
 reset_text = None
+board = [[0 for x in range(8)] for y in range(8)]
 
 def build_board(display):
     for x in range(0, 8):
         for y in range(0, 8):
             if (x + y) % 2 == 0:
-                pygame.draw.rect(display, color["black"], ((boardStart[0] + (y * squareSize)), (boardStart[1] + (x * squareSize)), squareSize, squareSize))
+                board[x][y] = pygame.draw.rect(display, color["black"], ((boardStart[0] + (y * squareSize)), (boardStart[1] + (x * squareSize)), squareSize, squareSize))
             else:
-                pygame.draw.rect(display, color["white"], (boardStart[0] + (y * squareSize), boardStart[1] + (x * squareSize), squareSize, squareSize))
+                board[x][y] = pygame.draw.rect(display, color["white"], (boardStart[0] + (y * squareSize), boardStart[1] + (x * squareSize), squareSize, squareSize))
 
 
 def build_pieces(display, pieces):
