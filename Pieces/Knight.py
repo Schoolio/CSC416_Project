@@ -1,4 +1,5 @@
-__author__ = 'Zac'
+__author__ = 'Zac', 'Shawyn Kane'
+import Pieces
 
 
 class Knight:
@@ -9,13 +10,11 @@ class Knight:
         self.image = None
         self.isWhite = isWhite
 
-        if self.isWhite is True:
-            self.image = "bin/Knight_W.png"
-        else:
-            self.image = "bin/Knight_B.png"
+        if self.isWhite is True: self.image = "bin/Knight_W.png"
+        else: self.image = "bin/Knight_B.png"
 
-    def move(self):
+    def move(self):  # TODO Write move() function for Knight
         pass
 
-    def attack(self):
+    def attack(self):  # TODO Write attack() function for Knight
         pass
