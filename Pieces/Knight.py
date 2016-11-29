@@ -13,7 +13,7 @@ class Knight:
         if self.isWhite is True: self.image = "bin/Knight_W.png"
         else: self.image = "bin/Knight_B.png"
 
-    def get_valid_moves(self, selectedPiece, pieces):
+    def get_valid_moves(self, pieces, selectedPiece):
         pass
 
     def move(self):  # TODO Write move() function for Knight

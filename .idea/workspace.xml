@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6aec7b19-99b2-4da1-bc7a-4db493e81a51" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI.py" afterPath="$PROJECT_DIR$/AI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Knight.py" afterPath="$PROJECT_DIR$/Pieces/Knight.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,13 +42,13 @@
         <entry file="file://$PROJECT_DIR$/Pieces/Queen.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="51" />
+              <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AI.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AI.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Knight.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Knight.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pieces/Knight.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -160,8 +160,8 @@
         <option value="$PROJECT_DIR$/Pieces/Bishop.py" />
         <option value="$PROJECT_DIR$/Pieces/King.py" />
         <option value="$PROJECT_DIR$/Pieces/Pawn.py" />
-        <option value="$PROJECT_DIR$/Pieces/Knight.py" />
         <option value="$PROJECT_DIR$/AI.py" />
+        <option value="$PROJECT_DIR$/Pieces/Knight.py" />
       </list>
     </option>
   </component>
@@ -623,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480442603078</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated the get_valid_moves() for Bishop, King, and Pawn. Made a correction in AI">
+      <created>1480443144165</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1480443144165</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -671,7 +678,8 @@
     <MESSAGE value="Added get_valided_moves() function" />
     <MESSAGE value="Updated the get_valid_moves() for Queen." />
     <MESSAGE value="Updated the get_valid_moves() for Bishop, King, Knight, and Pawn. Made a correction in AI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the get_valid_moves() for Bishop, King, Knight, and Pawn. Made a correction in AI" />
+    <MESSAGE value="Updated the get_valid_moves() for Bishop, King, and Pawn. Made a correction in AI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the get_valid_moves() for Bishop, King, and Pawn. Made a correction in AI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -972,14 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pieces/Queen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pieces/Rook.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -996,18 +996,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pieces/Knight.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pieces/Queen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pieces/Knight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
           <folding />
         </state>
       </provider>
