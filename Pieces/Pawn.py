@@ -13,7 +13,12 @@ class Pawn:
         if self.is_white is True: self.image = "bin/Pawn_W.png"
         else: self.image = "bin/Pawn_B.png"
 
-    def move(self, pieces, twice=False):
+    def move(self, pieces, inputLocation, twice=False):
+        if inputLocation != (self.location[0] + 1, self.location[1]):
+            return False
+        elif inputLocation != (self.location[0] + 2, self.location[1]):
+            return False
+
         new_location = None
 
         if (twice is True) and (self.initial_move is False): return False
