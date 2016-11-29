@@ -42,3 +42,43 @@ class Pawn:
         self.location[0] = new_location[0]
         self.locatoin[1] = new_location[1]
         return True
+
+    def get_valid_moves(self, selectedPiece, pieces):
+        output = []
+        if selectedPiece.is_white:
+            if selectedPiece.initial_move:
+                blocked = False
+                for x in pieces[:]:
+                    if x.location == selectedPiece.location[1] - 1 or x.location == selectedPiece.location[1] - 2:
+                        blocked = True
+            if blocked is False:
+                output.append((selectedPiece.location[0], selectedPiece.location[1] - 1))
+                output.append((selectedPiece.location[0], selectedPiece.location[1] - 2))
+                return output
+
+            for x in pieces[:]:
+                if x.location == selectedPiece.location[1] - 1:
+                    blocked = True
+
+            if blocked is False:
+                output.append((selectedPiece.location[0], selectedPiece.location[1] - 1))
+                return output
+
+        if not selectedPiece.is_white:
+            if selectedPiece.initial_move:
+                blocked = False
+                for x in pieces[:]:
+                    if x.location == selectedPiece.location[1] + 1 or x.location == selectedPiece.location[1] + 2:
+                        blocked = True
+            if blocked is False:
+                output.append((selectedPiece.location[0], selectedPiece.location[1] + 1))
+                output.append((selectedPiece.location[0], selectedPiece.location[1] + 2))
+                return output
+
+            for x in pieces[:]:
+                if x.location == selectedPiece.location[1] + 1:
+                    blocked = True
+
+            if blocked is False:
+                output.append((selectedPiece.location[0], selectedPiece.location[1] + 1))
+                return output

@@ -12,8 +12,34 @@ class Rook:
         if self.isWhite is True: self.image = "bin/Rook_W.png"
         else: self.image = "bin/Rook_B.png"
 
-    def move(self):  # TODO Write move() function for Rook
-        pass
+    def get_valid_moves(self, selectedPiece, pieces):
+        output = []
+        blocked0 = False
+        blocked1 = False
+        blocked2 = False
+        blocked3 = False
+        for x in range(1, 9):
+            for y in pieces[:]:
+                if (selectedPiece.location[0] + x, selectedPiece.location[1]) == y.location:
+                    blocked0 = True
+                elif not blocked0:
+                    output.append((selectedPiece.location[0] + x, selectedPiece.location[1]))
+
+                if (selectedPiece.location[0] - x, selectedPiece.location[1]) == y.location:
+                    blocked1 = True
+                elif not blocked1:
+                    output.append((selectedPiece.location[0] - x, selectedPiece.location[1]))
+
+                if (selectedPiece.location[0], selectedPiece.location[1] + x) == y.location:
+                    blocked2 = True
+                elif not blocked2:
+                    output.append((selectedPiece.location[0], selectedPiece.location[1] + x))
+
+                if (selectedPiece.location[0], selectedPiece.location[1] - x) == y.location:
+                    blocked3 = True
+                elif not blocked3:
+                    output.append((selectedPiece.location[0], selectedPiece.location[1] - x))
+        return output
 
     def attack(self):  # TODO Write attack() function for Rook
         pass
