@@ -15,9 +15,9 @@ def build_board(display):
     for x in range(0, 8):
         for y in range(0, 8):
             if (x + y) % 2 == 0:
-                board[x][y] = pygame.draw.rect(display, color["black"], ((boardStart[0] + (y * squareSize)), (boardStart[1] + (x * squareSize)), squareSize, squareSize))
+                board[y][x] = pygame.draw.rect(display, color["black"], ((boardStart[0] + (y * squareSize)), (boardStart[1] + (x * squareSize)), squareSize, squareSize))
             else:
-                board[x][y] = pygame.draw.rect(display, color["white"], (boardStart[0] + (y * squareSize), boardStart[1] + (x * squareSize), squareSize, squareSize))
+                board[y][x] = pygame.draw.rect(display, color["white"], (boardStart[0] + (y * squareSize), boardStart[1] + (x * squareSize), squareSize, squareSize))
 
 
 def build_pieces(display, pieces):

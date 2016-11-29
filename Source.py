@@ -21,16 +21,18 @@ while True:
             pygame.quit()
             sys.exit()
         if event.type == MOUSEBUTTONDOWN:
-            #Checks for reset button click
+            # Checks for reset button click
             if Graphics.reset_text.collidepoint(pygame.mouse.get_pos()):
                 gameState.reset()
                 print("reset")
-            #Checks for selection a position
+            # Checks for selection a position
             for x in range(8):
                 temp = Graphics.board[x]
                 for y in range(8):
                     local = temp[y]
                     if local.collidepoint(pygame.mouse.get_pos()):
-                        print(x, y)
+                        gameState.selectedPiece = gameState.select_piece((x, y))
+                    elif (gameState.selectedPiece is not None) and (gameState.select_piece((x, y)) is None):
+                        gameState.selectedPiece.move(gameState.pieces, False)
     fpsClock.tick(60)
     pygame.display.update()
