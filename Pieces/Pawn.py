@@ -13,6 +13,9 @@ class Pawn:
         if self.is_white is True: self.image = "bin/Pawn_W.png"
         else: self.image = "bin/Pawn_B.png"
 
+    def get_is_white(self):
+        return self.is_white
+
     def move(self, pieces, inputLocation, twice=False):
         if inputLocation is not (self.location[0], self.location[1] - 1):
             return False
@@ -45,7 +48,7 @@ class Pawn:
 
     def get_valid_moves(self, selectedPiece, pieces):
         output = []
-        if selectedPiece.is_white:
+        if selectedPiece.get_is_white():
             if selectedPiece.initial_move:
                 blocked = False
                 for x in pieces[:]:
