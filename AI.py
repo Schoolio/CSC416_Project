@@ -59,5 +59,4 @@ def make_move(gameState, target):
     for x in validMoves[:]:
         if x == target:
             gameState.selectedPiece.location = target
-            print("2")
     return gameState
