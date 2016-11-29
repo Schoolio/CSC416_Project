@@ -8,4 +8,7 @@ Fill out move and attack functions for each piece type. Need to complete the tas
     --COMPLETED--Pawn--COMPLETED--
     Queen
     Rook
+
+pawn can jump over other pieces
+
 Properly link GameState <- Type
