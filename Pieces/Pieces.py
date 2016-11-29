@@ -1,11 +1,11 @@
 __author__ = 'Shawyn Kane'
 
 
-def location_is_empty(self, pieces, new_location):
+def location_is_empty(pieces, new_location):
     return new_location not in [x.location for x in pieces]
 
 
-def protecting_king(self, pieces, piece_to_check_location):
+def protecting_king(pieces, piece_to_check_location):
     king_location = None
     for x in pieces:
         if x.name is "King":
