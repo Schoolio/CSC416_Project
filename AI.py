@@ -6,6 +6,7 @@ import GameState
 def make_move(gameState, target):
     validMoves = gameState.selectedPiece.get_valid_moves(gameState.pieces, gameState.selectedPiece)
     print("Valid moves", validMoves)
+    print(gameState.selectedPiece)
     for x in validMoves[:]:
         if x == target:
             gameState.selectedPiece.location = target
@@ -24,7 +25,7 @@ def suggested_move(gameState):
 
     for x in myValidMoves[:]:
         gameState.selectedPiece = x[0]
-        possibleMoves.append(gameState.make_move(gameState, x[1]))
+        possibleMoves.append(make_move(gameState, x[1]))
     bScore = 0
     for x in possibleMoves[:]:
         t = x.score
