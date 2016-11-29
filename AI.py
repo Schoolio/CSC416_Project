@@ -5,13 +5,13 @@ import GameState
 def get_valid_moves(pieces, selectedPiece):
 
     elif selectedPiece.name is "Knight":
-        None
+        pass
     elif selectedPiece.name is "Bishop":
-        None
+        pass
     elif selectedPiece.name is "Queen":
-        None
+        pass
     elif selectedPiece.name is "King":
-        None
+        pass
     elif selectedPiece.name is "Pawn":
         if selectedPiece.is_white:
             if selectedPiece.initial_move:
