@@ -1,6 +1,6 @@
 __author__ = 'Zac'
 
-import Graphics, pygame, sys, GameState, Pieces
+import Graphics, pygame, sys, GameState, Pieces, AI
 from pygame.locals import *
 
 
@@ -26,13 +26,25 @@ while True:
                 gameState.reset()
                 print("reset")
             # Checks for selection a position
+            myBool = False
             for x in range(8):
                 temp = Graphics.board[x]
                 for y in range(8):
                     local = temp[y]
                     if local.collidepoint(pygame.mouse.get_pos()):
-                        gameState.selectedPiece = gameState.select_piece((x, y))
-                    elif (gameState.selectedPiece is not None) and (gameState.select_piece((x, y)) is None):
-                        gameState.selectedPiece.move(gameState.pieces, False)
+                        if gameState.selectedPiece is None:
+                            print(x, y)
+                            gameState.selectedPiece = gameState.select_piece((x, y))
+                            myBool = True
+                            break
+                        elif (gameState.selectedPiece is not None) and (gameState.select_piece((x, y)) is None):
+                            print("elif", x, y)
+                            # gameState.selectedPiece.move(gameState.pieces, (x, y), False)
+                            gameState = AI.make_move(gameState, (x, y))
+                            print(gameState.selectedPiece.location)
+                            myBool = True
+                            break
+                    if myBool:
+                        break
     fpsClock.tick(60)
     pygame.display.update()

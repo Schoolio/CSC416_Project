@@ -14,22 +14,22 @@ class Pawn:
         else: self.image = "bin/Pawn_B.png"
 
     def move(self, pieces, inputLocation, twice=False):
-        if inputLocation != (self.location[0] + 1, self.location[1]):
+        if inputLocation is not (self.location[0], self.location[1] - 1):
             return False
-        elif inputLocation != (self.location[0] + 2, self.location[1]):
+        elif inputLocation is not (self.location[0], self.location[1] - 2):
             return False
-
+        print("do we get here")
         new_location = None
 
         if (twice is True) and (self.initial_move is False): return False
-        if (twice is True) and (self.initial_move is True): new_location = (self.location[0] + 2, self.location[1])
-        else: new_location = (self.location[0] + 1, self.location[1])
+        if (twice is True) and (self.initial_move is True): new_location = (self.location[0], self.location[1] - 2)
+        else: new_location = (self.location[0], self.location[1] - 1)
 
         if not Pieces.location_is_empty(pieces, new_location): return False
         if Pieces.protecting_king(pieces, self.location): return False
         self.initial_move = False;
-        self.location[0] = new_location[0]
-        self.locatoin[1] = new_location[1]
+
+        self.location = new_location
         return True
 
     def attack(self, pieces, left):
