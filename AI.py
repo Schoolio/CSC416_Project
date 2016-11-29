@@ -4,12 +4,12 @@ import GameState
 
 def get_valid_moves(pieces, selectedPiece):
     output = []
-    blocked0 = False
-    blocked1 = False
-    blocked2 = False
-    blocked3 = False
     if selectedPiece.name is "Rook":
-        for x in range(8):
+        blocked0 = False
+        blocked1 = False
+        blocked2 = False
+        blocked3 = False
+        for x in range(1, 9):
             for y in pieces[:]:
                 if (selectedPiece.location[0] + x, selectedPiece.location[1]) == y.location:
                     blocked0 = True
@@ -30,6 +30,7 @@ def get_valid_moves(pieces, selectedPiece):
                     blocked3 = True
                 elif not blocked3:
                     output.append((selectedPiece.location[0], selectedPiece.location[1] - x))
+        return output
     elif selectedPiece.name is "Knight":
         None
     elif selectedPiece.name is "Bishop":
