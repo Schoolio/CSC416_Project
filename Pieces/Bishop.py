@@ -13,7 +13,7 @@ class Bishop:
         if self.isWhite is True: self.image = "bin/Bishop_W.png"
         else: self.image = "bin/Bishop_B.png"
 
-    def get_valid_moves(self):
+    def get_valid_moves(self, selectedPiece, pieces):
         pass
 
 
