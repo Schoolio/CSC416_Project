@@ -38,10 +38,11 @@ while True:
                             myBool = True
                             break
                         elif (gameState.selectedPiece is not None) and (gameState.select_piece((x, y)) is None):
-                            print("Target", x, y)
+                            print("Target: %s" %x, y)
                             # gameState.selectedPiece.move(gameState.pieces, (x, y), False)
                             gameState = AI.make_move(gameState, (x, y))
-                            print(gameState.selectedPiece.location)
+                            print("new location", gameState.selectedPiece.location)
+                            gameState.selectedPiece = None
                             myBool = True
                             break
                     if myBool:
