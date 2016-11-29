@@ -46,7 +46,7 @@ class Pawn:
         self.locatoin[1] = new_location[1]
         return True
 
-    def get_valid_moves(self, selectedPiece, pieces):
+    def get_valid_moves(self, pieces, selectedPiece):
         output = []
         if selectedPiece.get_is_white():
             if selectedPiece.initial_move:

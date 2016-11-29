@@ -12,7 +12,7 @@ class Rook:
         if self.isWhite is True: self.image = "bin/Rook_W.png"
         else: self.image = "bin/Rook_B.png"
 
-    def get_valid_moves(self, selectedPiece, pieces):
+    def get_valid_moves(self, pieces, selectedPiece):
         output = []
         blocked0 = False
         blocked1 = False

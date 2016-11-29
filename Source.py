@@ -34,10 +34,10 @@ while True:
                     if local.collidepoint(pygame.mouse.get_pos()):
                         if gameState.selectedPiece is None:
                             print(x, y)
-                            gameState.selectedPiece = gameState.select_piece((x, y))
+                            gameState.selectedPiece = gameState.get_piece((x, y))
                             myBool = True
                             break
-                        elif (gameState.selectedPiece is not None) and (gameState.select_piece((x, y)) is None):
+                        elif (gameState.selectedPiece is not None) and (gameState.get_piece((x, y)) is None):
                             print("Target:", (x, y))
                             #gameState.selectedPiece.move(gameState.pieces, (x, y), False)
                             gameState = AI.make_move(gameState, (x, y))
