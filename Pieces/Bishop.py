@@ -13,9 +13,12 @@ class Bishop:
         if self.isWhite is True: self.image = "bin/Bishop_W.png"
         else: self.image = "bin/Bishop_B.png"
 
-    def move(self):  # TODO Write move() function for Bishop
+    def get_valid_moves(self):
         pass
 
+
+    def move(self):  # TODO Write move() function for Bishop
+        pass
 
     def attack(self):  # TODO Write attack() function for Bishop
         pass
