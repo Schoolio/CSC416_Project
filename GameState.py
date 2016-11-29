@@ -50,7 +50,7 @@ class GameState:
                 output = output - x.value
         return output
 
-    def select_piece(self, location):
+    def get_piece(self, location):
         for x in self.pieces[:]:
             if x.location == location:
                 return x
