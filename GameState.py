@@ -16,6 +16,7 @@ class GameState:
 
     # Used to reset the game state to a starting position
     def reset(self):
+        self.pieces = []
         for x in range(0, 8):
             self.pieces.append(Pawn.Pawn((x, 6), True))
             self.pieces.append(Pawn.Pawn((x, 1), False))
