@@ -2,15 +2,15 @@ __author__ = 'Zac, Shawyn Kane'
 import Pieces
 
 class Pawn:
-    def __init__(self, location, is_white):
+    def __init__(self, location, isWhite):
         self.name = "Pawn"
         self.value = 1
         self.initial_move = True
         self.location = location
         self.image = None
-        self.is_white = is_white
+        self.isWhite = isWhite
 
-        if self.is_white is True: self.image = "bin/Pawn_W.png"
+        if self.isWhite is True: self.image = "bin/Pawn_W.png"
         else: self.image = "bin/Pawn_B.png"
 
     def move(self, pieces, inputLocation, twice=False):
@@ -45,7 +45,7 @@ class Pawn:
 
     def get_valid_moves(self, pieces, selectedPiece):
         output = []
-        if selectedPiece.is_white:
+        if selectedPiece.isWhite:
             if selectedPiece.initial_move:
                 blocked = False
                 for x in pieces[:]:

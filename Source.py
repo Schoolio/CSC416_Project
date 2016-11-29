@@ -16,6 +16,7 @@ while True:
     Graphics.build_pieces(myDisplay, gameState.pieces)
     Graphics.build_status(myDisplay, gameState.status)
     Graphics.build_score(myDisplay, gameState.score)
+    Graphics.build_suggest(myDisplay)
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
@@ -25,6 +26,9 @@ while True:
             if Graphics.reset_text.collidepoint(pygame.mouse.get_pos()):
                 gameState.reset()
                 print("reset")
+            if Graphics.suggestButton.collidepoint(pygame.mouse.get_pos()):
+                gameState = AI.suggested_move(gameState)
+                print("suggest")
             # Checks for selection a position
             myBool = False
             for x in range(8):

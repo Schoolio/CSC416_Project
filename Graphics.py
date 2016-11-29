@@ -10,6 +10,7 @@ resolution = (1070, 770)
 borderWidth = 20
 reset_text = None
 board = [[0 for x in range(8)] for y in range(8)]
+suggestButton = None
 
 def build_board(display):
     for x in range(0, 8):
@@ -66,3 +67,12 @@ def build_score(display, score):
     status_text.centerx = boardStart[0] + (squareSize * 8) + 55 + 157
     status_text.centery = 500
     display.blit(status_font, status_text)
+
+def build_suggest(display):
+    global suggestButton
+    BasicFont = pygame.font.SysFont(None, 32)
+    status_font = BasicFont.render("Suggest", True, (255, 255, 255), (0, 0, 0))
+    suggestButton = status_font.get_rect()
+    suggestButton.centerx = boardStart[0] + (squareSize * 8) + 55 + 157
+    suggestButton.centery = 500
+    display.blit(status_font, suggestButton)
