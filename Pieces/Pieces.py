@@ -5,10 +5,10 @@ def location_is_empty(pieces, new_location):
     return new_location not in [x.location for x in pieces]
 
 
-def protecting_king(pieces, piece_to_check_location):
+def protecting_king(pieces, piece_to_check_location, isWhite):
     king_location = None
     for x in pieces:
-        if x.name is "King":
+        if x.name is "King" and x.isWhite == isWhite:
             king_location = x.location
             break
     location_difference = (king_location[0]-piece_to_check_location[0],king_location[1]-piece_to_check_location[1])
@@ -18,7 +18,7 @@ def protecting_king(pieces, piece_to_check_location):
             while check_location[0] > -1 and check_location[1] > -1:
                 for x in pieces:
                     if x.location == check_location:
-                        if x.name in ("Bishop", "Queen"): return True
+                        if x.name in ("Bishop", "Queen") and x.isWhite != isWhite: return True
                         else: return False
                 check_location[0] -= 1
                 check_location[1] -= 1
@@ -28,10 +28,8 @@ def protecting_king(pieces, piece_to_check_location):
             while check_location[0] < 8 and check_location[1] < 8:
                 for x in pieces:
                     if x.location == check_location:
-                        if x.name in ("Bishop", "Queen"):
-                            return True
-                        else:
-                            return False
+                        if x.name in ("Bishop", "Queen") and x.isWhite != isWhite: return True
+                        else: return False
                 check_location[0] += 1
                 check_location[1] += 1
             return False
@@ -40,10 +38,8 @@ def protecting_king(pieces, piece_to_check_location):
             while check_location[0] < 8 and check_location[1] > -1:
                 for x in pieces:
                     if x.location == check_location:
-                        if x.name in ("Bishop", "Queen"):
-                            return True
-                        else:
-                            return False
+                        if x.name in ("Bishop", "Queen") and x.isWhite != isWhite: return True
+                        else: return False
                 check_location[0] += 1
                 check_location[1] -= 1
             return False
@@ -52,10 +48,8 @@ def protecting_king(pieces, piece_to_check_location):
             while check_location[0] > -1 and check_location[1] < 8:
                 for x in pieces:
                     if x.location == check_location:
-                        if x.name in ("Bishop", "Queen"):
-                            return True
-                        else:
-                            return False
+                        if x.name in ("Bishop", "Queen") and x.isWhite != isWhite: return True
+                        else: return False
                 check_location[0] -= 1
                 check_location[1] += 1
             return False
@@ -65,10 +59,8 @@ def protecting_king(pieces, piece_to_check_location):
             while check_location[1] < 8:
                 for x in pieces:
                     if x.location == check_location:
-                        if x.name in ("Rook", "Queen"):
-                            return True
-                        else:
-                            return False
+                        if x.name in ("Rook", "Queen") and x.isWhite != isWhite: return True
+                        else: return False
                 check_location[1] += 1
             return False
         else:
@@ -76,10 +68,8 @@ def protecting_king(pieces, piece_to_check_location):
             while check_location[1] > -1:
                 for x in pieces:
                     if x.location == check_location:
-                        if x.name in ("Rook", "Queen"):
-                            return True
-                        else:
-                            return False
+                        if x.name in ("Rook", "Queen") and x.isWhite != isWhite: return True
+                        else: return False
                 check_location[1] -= 1
             return False
     elif king_location[1] == piece_to_check_location[1]:
@@ -88,10 +78,8 @@ def protecting_king(pieces, piece_to_check_location):
             while check_location[0] < 8:
                 for x in pieces:
                     if x.location == check_location:
-                        if x.name in ("Rook", "Queen"):
-                            return True
-                        else:
-                            return False
+                        if x.name in ("Rook", "Queen") and x.isWhite != isWhite: return True
+                        else: return False
                 check_location[0] += 1
             return False
         else:
@@ -99,8 +87,6 @@ def protecting_king(pieces, piece_to_check_location):
             while check_location[0] > -1:
                 for x in pieces:
                     if x.location == check_location:
-                        if x.name in ("Rook", "Queen"):
-                            return True
-                        else:
-                            return False
+                        if x.name in ("Rook", "Queen"): return True
+                        else: return False
                 check_location[0] -= 1
