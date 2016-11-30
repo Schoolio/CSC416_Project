@@ -45,40 +45,43 @@ class Pawn:
 
     def get_valid_moves(self, pieces, selectedPiece):
         output = []
+
         if selectedPiece.isWhite:
+
+
             if selectedPiece.initial_move:
                 blocked = False
                 for x in pieces[:]:
-                    if x.location == selectedPiece.location[1] - 1 or x.location == selectedPiece.location[1] - 2:
+                    if (x.location[1] == (selectedPiece.location[1] - 1)) or (x.location[1] == (selectedPiece.location[1] - 2)):
                         blocked = True
-            if blocked is False:
-                output.append((selectedPiece.location[0], selectedPiece.location[1] - 1))
-                output.append((selectedPiece.location[0], selectedPiece.location[1] - 2))
-                return output
-
-            for x in pieces[:]:
-                if x.location == selectedPiece.location[1] - 1:
-                    blocked = True
-
-            if blocked is False:
-                output.append((selectedPiece.location[0], selectedPiece.location[1] - 1))
-                return output
-
-        if not selectedPiece.is_white:
-            if selectedPiece.initial_move:
+                if blocked is False:
+                    output.append((selectedPiece.location[0], selectedPiece.location[1] - 1))
+                    output.append((selectedPiece.location[0], selectedPiece.location[1] - 2))
+                    return output
+            else:
                 blocked = False
+                for x in pieces[:]:
+                    if x.location[1] == (selectedPiece.location[1] - 1):
+                        blocked = True
+                if blocked is False:
+                    output.append((selectedPiece.location[0], selectedPiece.location[1] - 1))
+                    return output
+
+        if not selectedPiece.isWhite:
+            blocked = False
+
+            if selectedPiece.initial_move:
                 for x in pieces[:]:
                     if x.location == selectedPiece.location[1] + 1 or x.location == selectedPiece.location[1] + 2:
                         blocked = True
-            if blocked is False:
-                output.append((selectedPiece.location[0], selectedPiece.location[1] + 1))
-                output.append((selectedPiece.location[0], selectedPiece.location[1] + 2))
-                return output
+                if blocked is False:
+                    output.append((selectedPiece.location[0], selectedPiece.location[1] + 1))
+                    output.append((selectedPiece.location[0], selectedPiece.location[1] + 2))
+                    return output
 
             for x in pieces[:]:
                 if x.location == selectedPiece.location[1] + 1:
                     blocked = True
-
             if blocked is False:
                 output.append((selectedPiece.location[0], selectedPiece.location[1] + 1))
                 return output
