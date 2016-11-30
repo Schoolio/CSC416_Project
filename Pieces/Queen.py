@@ -60,8 +60,8 @@ class Queen:
                     output.append((selectedPiece.location[0] - x, selectedPiece.location[1] + x))
 
                 if (selectedPiece.location[0]+ x, selectedPiece.location[1] - x) == y.location:
-                    blocked3 = True
-                elif not blocked3:
+                    blocked7 = True
+                elif not blocked7:
                     output.append((selectedPiece.location[0] + x, selectedPiece.location[1] - x))
         return output
 
