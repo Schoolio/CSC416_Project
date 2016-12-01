@@ -46,7 +46,9 @@ while True:
                         # The following elif block will select the tile to move the selected piece and try to move the
                         # currently selected piece (if there is one selected) if the tile selected is not valid to move
                         # to the currently selected piece will be deselected (in AI.make_move() function).
-                        elif (gameState.selectedPiece is not None) and (gameState.get_piece((x, y)) is None):
+                        elif (gameState.selectedPiece is not None) and ((gameState.get_piece((x, y)) is None) or \
+                             ((gameState.get_piece((x, y)) is not None) and \
+                             (gameState.get_piece((x, y)).isWhite is not gameState.selectedPiece.isWhite))):
                             print("Target:", (x, y))
                             #gameState.selectedPiece.move(gameState.pieces, (x, y), False)
                             gameState = AI.make_move(gameState, (x, y))

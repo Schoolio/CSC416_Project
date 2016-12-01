@@ -14,6 +14,7 @@ class Knight:
         else: self.image = "bin/Knight_B.png"
 
     def get_valid_moves(self, pieces, selectedPiece):
+        # if Pieces.protecting_king(pieces, selectedPiece.location, selectedPiece.isWhite): return None
         output = []
         blocked0 = False
         blocked1 = False

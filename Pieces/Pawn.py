@@ -6,6 +6,8 @@ class Pawn:
         self.name = "Pawn"
         self.value = 1
         self.initial_move = True
+        self.moved_two = False
+        self.en_passant = False
         self.location = location
         self.image = None
         self.isWhite = isWhite
@@ -44,13 +46,26 @@ class Pawn:
         return True
 
     def get_valid_moves(self, pieces, selectedPiece):
+        # if Pieces.protecting_king(pieces, selectedPiece.location, selectedPiece.isWhite): return None
         output = []
         blocked = False
         if selectedPiece.isWhite:
             if selectedPiece.initial_move:
                 for x in pieces[:]:
-                    if x.location == (selectedPiece.location[0], selectedPiece.location[1] - 1) or x.location == (selectedPiece.location[0], selectedPiece.location[1] - 2):
+                    if x.location == (selectedPiece.location[0], selectedPiece.location[1] - 1) or \
+                                    x.location == (selectedPiece.location[0], selectedPiece.location[1] - 2):
                         blocked = True
+
+                    if x.isWhite != selectedPiece.isWhite and \
+                       (x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1] - 1) or \
+                       x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1] - 1)):
+                        output.append(x.location)
+
+                    if x.isWhite != selectedPiece.isWhite and \
+                       (x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1]) or \
+                       x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1])) and x.moved_two:
+                        output.append((x.location[0], x.location[1] - 1))
+
                 if blocked is False:
                     output.append((selectedPiece.location[0], selectedPiece.location[1] - 1))
                     output.append((selectedPiece.location[0], selectedPiece.location[1] - 2))
@@ -59,6 +74,17 @@ class Pawn:
                 for x in pieces[:]:
                     if x.location == (selectedPiece.location[0], selectedPiece.location[1] - 1):
                         blocked = True
+
+                    if x.isWhite != selectedPiece.isWhite and \
+                       (x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1] - 1) or \
+                       x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1] - 1)):
+                        output.append(x.location)
+
+                    if x.isWhite != selectedPiece.isWhite and \
+                       (x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1]) or \
+                       x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1])) and x.moved_two:
+                        output.append((x.location[0], x.location[1] - 1))
+
                 if blocked is False:
                     output.append((selectedPiece.location[0], selectedPiece.location[1] - 1))
                     return output
@@ -66,8 +92,18 @@ class Pawn:
         if not selectedPiece.isWhite:
             if selectedPiece.initial_move:
                 for x in pieces[:]:
-                    if x.location == (selectedPiece.location[0], selectedPiece.location[1] + 1) or x.location == (selectedPiece.location[0], selectedPiece.location[1] + 2):
+                    if x.location == (selectedPiece.location[0], selectedPiece.location[1] + 1) or \
+                       x.location == (selectedPiece.location[0], selectedPiece.location[1] + 2):
                         blocked = True
+                    if x.isWhite != selectedPiece.isWhite and \
+                        (x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1] + 1) or \
+                        x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1] + 1)):
+                        output.append(x.location)
+
+                    if x.isWhite != selectedPiece.isWhite and \
+                        (x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1]) or \
+                        x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1])) and x.moved_two:
+                        output.append((x.location[0], x.location[1] + 1))
                 if blocked is False:
                     output.append((selectedPiece.location[0], selectedPiece.location[1] + 1))
                     output.append((selectedPiece.location[0], selectedPiece.location[1] + 2))
@@ -76,6 +112,15 @@ class Pawn:
                 for x in pieces[:]:
                     if x.location == (selectedPiece.location[0], selectedPiece.location[1] + 1):
                         blocked = True
+                    if x.isWhite != selectedPiece.isWhite and \
+                       (x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1] + 1) or \
+                       x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1] + 1)):
+                        output.append(x.location)
+
+                    if x.isWhite != selectedPiece.isWhite and \
+                       (x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1]) or \
+                       x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1])) and x.moved_two:
+                        output.append((x.location[0], x.location[1] + 1))
                 if blocked is False:
                     output.append((selectedPiece.location[0], selectedPiece.location[1] + 1))
                     return output

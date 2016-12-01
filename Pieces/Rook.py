@@ -1,5 +1,5 @@
 __author__ = 'Zac, Shawyn Kane'
-
+import Pieces
 
 class Rook:
     def __init__(self, location, isWhite):
@@ -13,6 +13,7 @@ class Rook:
         else: self.image = "bin/Rook_B.png"
 
     def get_valid_moves(self, pieces, selectedPiece):
+        # if Pieces.protecting_king(pieces, selectedPiece.location, selectedPiece.isWhite): return None
         output = []
         blocked0 = False
         blocked1 = False
