@@ -8,6 +8,8 @@ def make_move(gameState, target):
     print("Valid moves", validMoves)
     print(gameState.selectedPiece)
     if (validMoves is not None) and (target in validMoves[:]):
+        for piece in gameState.pieces[:]:
+            if piece.location == target: gameState.pieces.remove(piece)
         gameState.selectedPiece.location = target
         gameState.selectedPiece.initial_move = False
         gameState.whitesTurn = not gameState.whitesTurn

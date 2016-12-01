@@ -22,11 +22,13 @@ class Bishop:
         for x in range(1, 9):
             for y in pieces[:]:
                 if (selectedPiece.location[0] + x, selectedPiece.location[1] + x) == y.location:
+                    if y.isWhite != selectedPiece.isWhite: output.append(y.location)
                     blocked0 = True
                 elif not blocked0:
                     output.append((selectedPiece.location[0] + x, selectedPiece.location[1] + x))
 
                 if (selectedPiece.location[0] - x, selectedPiece.location[1] - x) == y.location:
+                    if y.isWhite != selectedPiece.isWhite: output.append(y.location)
                     blocked1 = True
                 elif not blocked1:
                     output.append((selectedPiece.location[0] - x, selectedPiece.location[1] - x))
@@ -37,6 +39,7 @@ class Bishop:
                     output.append((selectedPiece.location[0] - x, selectedPiece.location[1] + x))
 
                 if (selectedPiece.location[0] + x, selectedPiece.location[1] - x) == y.location:
+                    if y.isWhite != selectedPiece.isWhite: output.append(y.location)
                     blocked3 = True
                 elif not blocked3:
                     output.append((selectedPiece.location[0] + x, selectedPiece.location[1] - x))

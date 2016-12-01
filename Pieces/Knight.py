@@ -25,41 +25,49 @@ class Knight:
         blocked7 = False
         for x in pieces[:]:
             if x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1] + 2):
+                if x.isWhite != selectedPiece.isWhite: output.append(x.location)
                 blocked0 = True
             elif not blocked0:
                 output.append((selectedPiece.location[0] + 1, selectedPiece.location[1] + 2))
 
             if x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1] + 2):
+                if x.isWhite != selectedPiece.isWhite: output.append(x.location)
                 blocked1 = True
             elif not blocked1:
                 output.append((selectedPiece.location[0] - 1, selectedPiece.location[1] + 2))
 
             if x.location == (selectedPiece.location[0] + 1, selectedPiece.location[1] - 2):
+                if x.isWhite != selectedPiece.isWhite: output.append(x.location)
                 blocked2 = True
             elif not blocked2:
                 output.append((selectedPiece.location[0] + 1, selectedPiece.location[1] - 2))
 
             if x.location == (selectedPiece.location[0] - 1, selectedPiece.location[1] - 2):
+                if x.isWhite != selectedPiece.isWhite: output.append(x.location)
                 blocked3 = True
             elif not blocked3:
                 output.append((selectedPiece.location[0] - 1, selectedPiece.location[1] - 2))
 
             if x.location == (selectedPiece.location[0] + 2, selectedPiece.location[1] + 1):
+                if x.isWhite != selectedPiece.isWhite: output.append(x.location)
                 blocked4 = True
             elif not blocked4:
                 output.append((selectedPiece.location[0] + 2, selectedPiece.location[1] + 1))
 
             if x.location == (selectedPiece.location[0] + 2, selectedPiece.location[1] - 1):
+                if x.isWhite != selectedPiece.isWhite: output.append(x.location)
                 blocked5 = True
             elif not blocked5:
                 output.append((selectedPiece.location[0] + 2, selectedPiece.location[1] - 1))
 
             if x.location == (selectedPiece.location[0] - 2, selectedPiece.location[1] + 1):
+                if x.isWhite != selectedPiece.isWhite: output.append(x.location)
                 blocked6 = True
             elif not blocked6:
                 output.append((selectedPiece.location[0] - 2, selectedPiece.location[1] + 1))
 
             if x.location == (selectedPiece.location[0] - 2, selectedPiece.location[1] - 1):
+                if x.isWhite != selectedPiece.isWhite: output.append(x.location)
                 blocked7 = True
             elif not blocked7:
                 output.append((selectedPiece.location[0] - 2, selectedPiece.location[1] - 1))
