@@ -1,4 +1,4 @@
-__author__ = 'Zac'
+__author__ = 'Zac, Shawyn Kane'
 
 import Graphics, pygame, sys, GameState, Pieces, AI
 from pygame.locals import *
@@ -36,12 +36,16 @@ while True:
                 for y in range(8):
                     local = temp[y]
                     if local.collidepoint(pygame.mouse.get_pos()):
-
-                        if ((gameState.selectedPiece is None) and (gameState.get_piece((x, y)) is not None)) and (gameState.get_piece((x, y)).isWhite is gameState.whitesTurn):
+                        # The following if block will only select a piece that belongs to the current active player.
+                        if ((gameState.selectedPiece is None) and (gameState.get_piece((x, y)) is not None)) and \
+                                (gameState.get_piece((x, y)).isWhite is gameState.whitesTurn):
                             print(x, y)
                             gameState.selectedPiece = gameState.get_piece((x, y))
                             myBool = True
                             break
+                        # The following elif block will select the tile to move the selected piece and try to move the
+                        # currently selected piece (if there is one selected) if the tile selected is not valid to move
+                        # to the currently selected piece will be deselected (in AI.make_move() function).
                         elif (gameState.selectedPiece is not None) and (gameState.get_piece((x, y)) is None):
                             print("Target:", (x, y))
                             #gameState.selectedPiece.move(gameState.pieces, (x, y), False)
