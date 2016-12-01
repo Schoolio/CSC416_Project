@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aec7b19-99b2-4da1-bc7a-4db493e81a51" name="Default" comment="">
+    <list default="true" id="6aec7b19-99b2-4da1-bc7a-4db493e81a51" name="Default" comment="Can now move King">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI.py" afterPath="$PROJECT_DIR$/AI.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source.py" afterPath="$PROJECT_DIR$/Source.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Bishop.py" afterPath="$PROJECT_DIR$/Pieces/Bishop.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/King.py" afterPath="$PROJECT_DIR$/Pieces/King.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,8 +43,28 @@
       <file leaf-file-name="AI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="62" lean-forward="true" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+            <state relative-caret-position="187">
+              <caret line="11" column="52" lean-forward="true" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bishop.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pieces/Bishop.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="King.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pieces/King.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="77">
+              <caret line="17" column="511" lean-forward="false" selection-start-line="17" selection-start-column="511" selection-end-line="17" selection-end-column="511" />
               <folding />
             </state>
           </provider>
@@ -52,8 +73,8 @@
       <file leaf-file-name="Rook.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pieces/Rook.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-266">
-              <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="51" />
+            <state relative-caret-position="159">
+              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -136,13 +157,13 @@
         <option value="$PROJECT_DIR$/GameState.py" />
         <option value="$PROJECT_DIR$/Pieces/Pieces.py" />
         <option value="$PROJECT_DIR$/Pieces/Knight.py" />
-        <option value="$PROJECT_DIR$/Pieces/King.py" />
         <option value="$PROJECT_DIR$/Pieces/Queen.py" />
-        <option value="$PROJECT_DIR$/Pieces/Bishop.py" />
         <option value="$PROJECT_DIR$/TODO.txt" />
         <option value="$PROJECT_DIR$/Pieces/Pawn.py" />
         <option value="$PROJECT_DIR$/Source.py" />
         <option value="$PROJECT_DIR$/AI.py" />
+        <option value="$PROJECT_DIR$/Pieces/Bishop.py" />
+        <option value="$PROJECT_DIR$/Pieces/King.py" />
       </list>
     </option>
   </component>
@@ -545,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480550273208</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Integrated turns.">
+      <created>1480555376305</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1480555376305</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -600,7 +628,8 @@
     <MESSAGE value="Updated the get_valid_moves() function for the Queen and Bishop." />
     <MESSAGE value="Corrected bug that allowed a pawn to jump over other pieces." />
     <MESSAGE value="Fixed a few more bugs with the pawns." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a few more bugs with the pawns." />
+    <MESSAGE value="Integrated turns." />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrated turns." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -843,22 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pieces/Bishop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pieces/King.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pieces/Queen.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -911,14 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pieces/Rook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pieces/Pawn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -935,10 +940,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pieces/Rook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pieces/King.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="17" column="511" lean-forward="false" selection-start-line="17" selection-start-column="511" selection-end-line="17" selection-end-column="511" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pieces/Bishop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="62" lean-forward="true" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+        <state relative-caret-position="187">
+          <caret line="11" column="52" lean-forward="true" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
           <folding />
         </state>
       </provider>

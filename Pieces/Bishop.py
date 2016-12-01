@@ -40,7 +40,7 @@ class Bishop:
                     blocked3 = True
                 elif not blocked3:
                     output.append((selectedPiece.location[0] + x, selectedPiece.location[1] - x))
-
+        return output
 
     def move(self):  # TODO Write move() function for Bishop
         pass

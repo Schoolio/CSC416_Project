@@ -11,8 +11,8 @@ def make_move(gameState, target):
         gameState.selectedPiece.location = target
         gameState.selectedPiece.initial_move = False
         gameState.whitesTurn = not gameState.whitesTurn
-        print("new location", gameState.selectedPiece.location)
-        gameState.selectedPiece = None
+    print("new location", gameState.selectedPiece.location)
+    gameState.selectedPiece = None
     return gameState
 
 def suggested_move(gameState):

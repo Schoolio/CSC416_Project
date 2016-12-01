@@ -14,7 +14,13 @@ class King:
         else: self.image = "bin/King_B.png"
 
     def get_valid_moves(self, pieces, selectedPiece):
-        pass
+        x = 1
+        moves = ((selectedPiece.location[0] + x, selectedPiece.location[1]), (selectedPiece.location[0] - x, selectedPiece.location[1]), (selectedPiece.location[0], selectedPiece.location[1] + x), (selectedPiece.location[0], selectedPiece.location[1] - x), (selectedPiece.location[0] + x, selectedPiece.location[1] + x), (selectedPiece.location[0] - x, selectedPiece.location[1] - x), (selectedPiece.location[0] - x, selectedPiece.location[1] + x), (selectedPiece.location[0] + x, selectedPiece.location[1] - x))
+        occupied_locations = [x.location for x in pieces]
+        output = []
+        for move in moves:
+            if move not in occupied_locations: output.append(move)
+        return output
 
     def move(self):  # TODO Write move() function for King
         pass
