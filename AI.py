@@ -40,3 +40,23 @@ def suggested_move(gameState):
             bScore = t
 
     return bestMove
+
+def is_checked(gameState):
+    kingLocation = None
+    for x in gameState.pieces[:]:
+        if gameState.whitesTurn == x.isWhite and x.name is "King":
+            kingLocation = x.location
+
+    for x in gameState.pieces[:]:
+        if kingLocation in x.get_valid_moves(gameState.pieces, x) and x.isWhite is not gameState.whitesTurn:
+            return True
+
+    return False
+
+def is_checkmate(gameState):
+    kingLocation = None
+    kingPossibleMoves = []
+    for x in gameState.pieces[:]:
+        if gameState.whitesTurn == x.isWhite and x.name is "King":
+            kingLocation = x.location
+            kingPossibleMoves = x.get_valid_moves(gameState.selectedPiece, x)
