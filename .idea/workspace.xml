@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6aec7b19-99b2-4da1-bc7a-4db493e81a51" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI.py" afterPath="$PROJECT_DIR$/AI.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Bishop.py" afterPath="$PROJECT_DIR$/Pieces/Bishop.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/King.py" afterPath="$PROJECT_DIR$/Pieces/King.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Knight.py" afterPath="$PROJECT_DIR$/Pieces/Knight.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Pawn.py" afterPath="$PROJECT_DIR$/Pieces/Pawn.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Queen.py" afterPath="$PROJECT_DIR$/Pieces/Queen.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pieces/Rook.py" afterPath="$PROJECT_DIR$/Pieces/Rook.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source.py" afterPath="$PROJECT_DIR$/Source.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -562,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480562850064</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added some comments.">
+      <created>1480576741386</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1480576741386</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
