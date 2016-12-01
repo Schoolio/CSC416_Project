@@ -10,6 +10,11 @@ gameState = GameState.GameState()
 fpsClock = pygame.time.Clock()
 
 while True:
+
+    if AI.is_checked(gameState):
+        gameState.status = "Check"
+    if AI.is_checkmate(gameState):
+        gameState.status = "Checkmate"
     Graphics.build_border(myDisplay)
     Graphics.build_board(myDisplay)
     Graphics.build_menu(myDisplay)
@@ -21,6 +26,9 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
+        if event.type == KEYDOWN:
+            if event.key == K_1:
+                gameState.pieces = gameState.preset1()
         if event.type == MOUSEBUTTONDOWN:
             # Checks for reset button click
             if Graphics.reset_text.collidepoint(pygame.mouse.get_pos()):
@@ -36,10 +44,13 @@ while True:
                 for y in range(8):
                     local = temp[y]
                     if local.collidepoint(pygame.mouse.get_pos()):
-                        # The following if block will only select a piece that belongs to the current active player.
-                        if ((gameState.selectedPiece is None) and (gameState.get_piece((x, y)) is not None)) and \
-                                (gameState.get_piece((x, y)).isWhite is gameState.whitesTurn):
+
+                        if ((gameState.selectedPiece is None) and (gameState.get_piece((x, y)) is not None)) and (gameState.get_piece((x, y)).isWhite is gameState.whitesTurn):
                             print(x, y)
+                            if gameState.whitesTurn == gameState.get_piece((x, y)).isWhite:
+                                gameState.selectedPiece = gameState.get_piece((x, y))
+                                myBool = True
+                                break
                             gameState.selectedPiece = gameState.get_piece((x, y))
                             myBool = True
                             break

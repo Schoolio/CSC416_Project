@@ -54,3 +54,12 @@ class GameState:
         for x in self.pieces[:]:
             if x.location == location:
                 return x
+
+    def preset1(self):
+        preset1 = []
+
+        preset1.append(King.King((0, 0), False))
+        preset1.append(Rook.Rook((7, 1), True))
+        preset1.append(King.King((7,7), True))
+        preset1.append(Rook.Rook((4,4), True))
+        return preset1
