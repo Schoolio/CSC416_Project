@@ -5,15 +5,12 @@ import GameState
 
 def make_move(gameState, target):
     validMoves = gameState.selectedPiece.get_valid_moves(gameState.pieces, gameState.selectedPiece)  # validate move
-    print("Valid moves", validMoves)
-    print(gameState.selectedPiece)
     if (validMoves is not None) and (target in validMoves[:]):  # validate move
         for piece in gameState.pieces[:]:  # this is suppose to remove a piece that is attacked
             if piece.location == target: gameState.pieces.remove(piece)  # suppose to remove a piece that is attacked
         gameState.selectedPiece.location = target  # move selected piece
         gameState.selectedPiece.initial_move = False  # indicate that the selected piece has been moved at least once
         gameState.whitesTurn = not gameState.whitesTurn  # change turn if the selected piece is moved
-    print("new location", gameState.selectedPiece.location)
     gameState.selectedPiece = None  # deselect the selected piece
     return gameState
 
@@ -25,7 +22,6 @@ def suggested_move(gameState):
     bestMove = None
     for x in gameState.pieces[:]:
         if isWhite == x.isWhite:
-            print(x)
             gameState.selectedPiece = x
             myValidMoves.append((x, x.get_valid_moves(gameState.pieces, gameState.selectedPiece)))
 
@@ -39,7 +35,10 @@ def suggested_move(gameState):
             bestMove = x
             bScore = t
 
-    return bestMove
+    if bScore is not 0:
+        return bestMove
+    else:
+        return gameState
 
 def is_checked(gameState):
     kingLocation = None
@@ -48,7 +47,7 @@ def is_checked(gameState):
             kingLocation = x.location
 
     for x in gameState.pieces[:]:
-        if kingLocation in x.get_valid_moves(gameState.pieces, x) and x.isWhite is not gameState.whitesTurn:
+        if x.name is not "King" and kingLocation in x.get_valid_moves(gameState.pieces, x) and x.isWhite is not gameState.whitesTurn:
             return True
 
     return False
@@ -56,7 +55,24 @@ def is_checked(gameState):
 def is_checkmate(gameState):
     kingLocation = None
     kingPossibleMoves = []
+    local = None
+    test = None
+    if not is_checked(gameState):
+        return False
     for x in gameState.pieces[:]:
         if gameState.whitesTurn == x.isWhite and x.name is "King":
             kingLocation = x.location
-            kingPossibleMoves = x.get_valid_moves(gameState.selectedPiece, x)
+            local = x
+            kingPossibleMoves = x.get_valid_moves(gameState.pieces, x)
+    temp = []
+    test = gameState
+    for x in kingPossibleMoves[:]:
+        test.selectedPiece = local
+        print("im the ass")
+        temp.append(make_move(test, x))
+        print(local.location)
+    for y in temp[:]:
+        if not is_checked(y):
+            return False
+        else:
+            return True

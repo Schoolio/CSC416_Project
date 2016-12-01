@@ -10,6 +10,11 @@ gameState = GameState.GameState()
 fpsClock = pygame.time.Clock()
 
 while True:
+
+    if AI.is_checked(gameState):
+        gameState.status = "Check"
+    if AI.is_checkmate(gameState):
+        gameState.status = "Checkmate"
     Graphics.build_border(myDisplay)
     Graphics.build_board(myDisplay)
     Graphics.build_menu(myDisplay)
