@@ -4,7 +4,6 @@
     <list default="true" id="6aec7b19-99b2-4da1-bc7a-4db493e81a51" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI.py" afterPath="$PROJECT_DIR$/AI.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source.py" afterPath="$PROJECT_DIR$/Source.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,8 +91,8 @@
       <file leaf-file-name="AI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="13" column="54" lean-forward="false" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -137,8 +136,8 @@
         <option value="$PROJECT_DIR$/Pieces/Bishop.py" />
         <option value="$PROJECT_DIR$/Pieces/Knight.py" />
         <option value="$PROJECT_DIR$/Pieces/Queen.py" />
-        <option value="$PROJECT_DIR$/AI.py" />
         <option value="$PROJECT_DIR$/Source.py" />
+        <option value="$PROJECT_DIR$/AI.py" />
       </list>
     </option>
   </component>
@@ -562,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480560628503</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added some comments.">
+      <created>1480562765865</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1480562765865</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -620,7 +626,8 @@
     <MESSAGE value="Integrated turns." />
     <MESSAGE value="Can now move Kings and Bishops. Fixed a bug that would cause a player to skip his/her turn by selecting and deselecting the piece." />
     <MESSAGE value="Updated Pieces." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Pieces." />
+    <MESSAGE value="Added some comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some comments." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -952,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="13" column="54" lean-forward="false" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
           <folding />
         </state>
       </provider>

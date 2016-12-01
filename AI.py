@@ -4,14 +4,14 @@ import GameState
 
 
 def make_move(gameState, target):
-    validMoves = gameState.selectedPiece.get_valid_moves(gameState.pieces, gameState.selectedPiece)
+    validMoves = gameState.selectedPiece.get_valid_moves(gameState.pieces, gameState.selectedPiece)  # validate move
     print("Valid moves", validMoves)
     print(gameState.selectedPiece)
-    if (validMoves is not None) and (target in validMoves[:]):
+    if (validMoves is not None) and (target in validMoves[:]):  # validate move
         for piece in gameState.pieces[:]:  # this is suppose to remove a piece that is attacked
             if piece.location == target: gameState.pieces.remove(piece)  # suppose to remove a piece that is attacked
         gameState.selectedPiece.location = target  # move selected piece
-        gameState.selectedPiece.initial_move = False # indicate that the selected piece has been moved at least once
+        gameState.selectedPiece.initial_move = False  # indicate that the selected piece has been moved at least once
         gameState.whitesTurn = not gameState.whitesTurn  # change turn if the selected piece is moved
     print("new location", gameState.selectedPiece.location)
     gameState.selectedPiece = None  # deselect the selected piece
