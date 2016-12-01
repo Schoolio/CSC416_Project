@@ -36,7 +36,8 @@ while True:
                 for y in range(8):
                     local = temp[y]
                     if local.collidepoint(pygame.mouse.get_pos()):
-                        if gameState.selectedPiece is None:
+
+                        if ((gameState.selectedPiece is None) and (gameState.get_piece((x, y)) is not None)) and (gameState.get_piece((x, y)).isWhite is gameState.whitesTurn):
                             print(x, y)
                             gameState.selectedPiece = gameState.get_piece((x, y))
                             myBool = True
@@ -45,8 +46,7 @@ while True:
                             print("Target:", (x, y))
                             #gameState.selectedPiece.move(gameState.pieces, (x, y), False)
                             gameState = AI.make_move(gameState, (x, y))
-                            print("new location", gameState.selectedPiece.location)
-                            gameState.selectedPiece = None
+
                             myBool = True
                             break
                     if myBool:

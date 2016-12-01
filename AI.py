@@ -7,11 +7,12 @@ def make_move(gameState, target):
     validMoves = gameState.selectedPiece.get_valid_moves(gameState.pieces, gameState.selectedPiece)
     print("Valid moves", validMoves)
     print(gameState.selectedPiece)
-    if validMoves is not None:
-        for x in validMoves[:]:
-            if x == target:
-                gameState.selectedPiece.location = target
-                gameState.selectedPiece.initial_move = False
+    if (validMoves is not None) and (target in validMoves[:]):
+        gameState.selectedPiece.location = target
+        gameState.selectedPiece.initial_move = False
+        gameState.whitesTurn = not gameState.whitesTurn
+        print("new location", gameState.selectedPiece.location)
+        gameState.selectedPiece = None
     return gameState
 
 def suggested_move(gameState):
